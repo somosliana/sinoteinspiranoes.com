@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "eleventy --serve --quiet --incremental",
+    "build": "eleventy"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "2.0.0-canary.15"
+  }
+}
