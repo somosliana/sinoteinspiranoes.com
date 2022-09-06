@@ -1,6 +1,7 @@
 const fs = require('fs')
 const yaml = require('js-yaml')
-const htmlmin = require('html-minifier')
+const htmlMinifier = require('html-minifier')
+const htmlPrettify = require('html-prettify')
 const { DateTime } = require('luxon')
 const externalLinks = require('eleventy-plugin-external-links')
 
@@ -12,16 +13,22 @@ function readableDate(dateObj) {
 }
 
 // Transformers
-function minifiedHTML(content, outputPath) {
+function minifyHTML(content, outputPath) {
   // https://www.11ty.dev/docs/config/#transforms-example-minify-html-output
-  // Eleventy 1.0+: use this.inputPath and this.outputPath instead
   if (outputPath && outputPath.endsWith('.html')) {
-    let minified = htmlmin.minify(content, {
+    let minified = htmlMinifier.minify(content, {
       useShortDoctype: true,
       removeComments: true,
       collapseWhitespace: true,
     })
     return minified
+  }
+  return content
+}
+
+function prettifyHTML(content, outputPath) {
+  if (outputPath && outputPath.endsWith('.html')) {
+    return htmlPrettify(content)
   }
   return content
 }
@@ -59,8 +66,9 @@ module.exports = function (eleventyConfig) {
   // Conditional configs
   const isProduction = process.env.NODE_ENV === 'production'
   if (isProduction) {
-    eleventyConfig.addTransform('minifyHtml', minifiedHTML)
+    eleventyConfig.addTransform('minifyHTML', minifyHTML)
   } else {
+    eleventyConfig.addTransform('prettifyHTML', prettifyHTML)
     eleventyConfig.setBrowserSyncConfig(support404())
   }
 

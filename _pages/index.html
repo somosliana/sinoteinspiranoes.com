@@ -1,16 +1,4 @@
 ---
-layout: layouts/default
+layout: layouts/index
 ---
-<h1 class="text-gray-100">{{ settings.title }}</h1>
-<h2 class="text-gray-100 text-xs" x-text="message" x-data="{ message: '{{ settings.description }}' }"></h2>
-<script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
+<img class="px-4 w-96" src="/static/vectors/proximamente.svg">
