@@ -12,24 +12,23 @@
     "start": "run-p dev",
     "clean": "rimraf _site"
   },
-  "dependencies": {
+  "devDependencies": {
     "@11ty/eleventy": "^1.0.2",
     "@tailwindcss/typography": "^0.5.7",
     "alpinejs": "^3.10.3",
-    "html-minifier": "^4.0.0",
-    "js-yaml": "^4.1.0",
-    "luxon": "^3.0.3",
-    "tailwindcss": "^3.1.8"
-  },
-  "devDependencies": {
     "autoprefixer": "^10.4.8",
     "cross-env": "^7.0.3",
     "eleventy-plugin-external-links": "^1.1.2",
+    "html-minifier": "^4.0.0",
+    "html-prettify": "^1.0.7",
+    "js-yaml": "^4.1.0",
+    "luxon": "^3.0.3",
     "netlify-cms-proxy-server": "^1.3.24",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.16",
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.13",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "tailwindcss": "^3.1.8"
   }
 }
