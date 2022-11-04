@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "serve": "run-p dev:tailwind dev:eleventy",
     "dev": "run-p dev:netlifycms dev:tailwind dev:eleventy",
     "dev:eleventy": "eleventy --serve --quiet --incremental",
     "dev:tailwind": "tailwindcss -i tailwind.css -o _site/main.css --watch",

@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
+
+/* @font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''),
+        url('static/fonts/barlow-condensed-v5-latin-regular.woff2') format('woff2'),
+        url('static/fonts/barlow-condensed-v5-latin-regular.woff') format('woff');
+} */
+
+html { scroll-behavior: smooth; }
+body { @apply text-white; }
+svg { @apply fill-current; }
+
+.h1 { @apply text-5xl font-semibold uppercase md:text-8xl; }
+.h2 { @apply text-4xl font-semibold uppercase md:text-5xl; }
+.h3 { @apply text-2xl font-semibold uppercase md:text-4xl; }
+.x { @apply max-w-screen-lg gap-8 px-4 mx-auto sm:gap-16 sm:px-16; }
+.y { @apply max-w-screen-lg gap-8 py-16 mx-auto sm:gap-16 sm:py-24; }
+.g { @apply gap-8 sm:gap-16}
+
 @tailwind utilities;

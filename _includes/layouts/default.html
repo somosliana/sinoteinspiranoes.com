@@ -13,10 +13,10 @@
   <style> [x-cloak] { display: none !important; } </style>
 </head>
 
-<body>
-  <main class="bg-gray-200 flex flex-col h-screen items-center justify-center w-full">
-    {{ content }}
-  </main>
+<body class="flex flex-col justify-between min-h-screen">
+  {% include "partials/nav.html" %}
+  {{ content }}
+  {% include "partials/footer.html" %}
   {% block javascript %}{% endblock %}
 </body>
 

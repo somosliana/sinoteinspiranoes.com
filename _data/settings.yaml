@@ -6,3 +6,27 @@ og: https://sinoteinspiranoes.com/static/images/og.png
 author: '@unfueguito'
 email: unfueguito@gmail.com
 instagram: https://www.instagram.com/unfueguito
+nav:
+  - txt: Inicio
+    url: '/'
+  - txt: Libro
+    url: '/#libro'
+  - txt: Stickers
+    url: '/#stickers'
+  - txt: Comentarios
+    url: '/#comentasrios'
+  - txt: Contacto
+    url: '/#contacto'
+social:
+  - alt: Twitter
+    src: /static/vectors/vendor/twitter.svg
+    url: '#'
+  - alt: Instagram
+    src: /static/vectors/vendor/instagram.svg
+    url: '#'
+  - alt: Facebook
+    src: /static/vectors/vendor/facebook.svg
+    url: '#'
+  - alt: TikTok
+    src: /static/vectors/vendor/tiktok.svg
+    url: '#'
