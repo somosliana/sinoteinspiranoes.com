@@ -1,7 +1,6 @@
 _:
   email: unfueguito@gmail.com
   tienda: https://tintalibre.com.ar/book/1363/Si_no_te_inspira,_no_es
-  stickers: https://www.dropbox.com/scl/fo/2tqzh2bntiu3vhipulwju/h?dl=0&rlkey=2g26hcttmvtyo1i9yd7uo5ilr
 seo:
   lang: es-AR
   url: https://sinoteinspiranoes.com
@@ -16,7 +15,7 @@ nav:
     url: 'https://tintalibre.com.ar/book/1363/Si_no_te_inspira,_no_es'
     external: true
   - title: Stickers
-    url: 'https://www.dropbox.com/scl/fo/2tqzh2bntiu3vhipulwju/h?dl=0&rlkey=2g26hcttmvtyo1i9yd7uo5ilr'
+    url: '/stickers'
   - title: Comentarios
     url: '/comentarios'
   - title: Contacto
@@ -51,4 +50,4 @@ stickers:
   - muy bien
   - no queres
   - noter
-  - olvidam
+  - olvidame
