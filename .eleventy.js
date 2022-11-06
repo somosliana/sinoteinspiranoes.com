@@ -1,7 +1,7 @@
 const fs = require('fs')
 const yaml = require('js-yaml')
 const externalLinks = require('eleventy-plugin-external-links')
-const htmlmin = require('html-minifier')
+const htmlMinifier = require('html-minifier')
 const beautify = require('js-beautify')
 
 const OUTPUT_DIRECTORY = 'public'
@@ -33,7 +33,7 @@ module.exports = function (eleventyConfig) {
     // Directory structure
     dir: {
       input: '_pages',
-      output: 'public',
+      output: OUTPUT_DIRECTORY,
       layouts: '../_layouts',
       includes: '../_includes',
       data: '../_data'
