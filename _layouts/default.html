@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ settings.seo.lang }}">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover" />
+  <link href="/static/vectors/logo.svg" rel="icon" type="image/svg+xml" />
+  <link href="/tailwind.css" rel="stylesheet" />
+  <script src="/alpine.js" defer></script>
+  <style>[x-cloak] { display: none !important; }</style>
+  <title></title>
+</head>
+
+<body class="flex flex-col min-h-screen">
+  {% include "_header.html" %}
+  <main class="bg-[#f2f2f2] flex-1 flex flex-col h-screen items-stretch justify-center w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {{ content }}
+  </main>
+  {% include "_footer.html" %}
+</body>
+
+</html>
