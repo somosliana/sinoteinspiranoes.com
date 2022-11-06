@@ -8,6 +8,7 @@ const OUTPUT_DIRECTORY = 'public'
 
 module.exports = function (eleventyConfig) {
   // Ignore
+  eleventyConfig.ignores.add('readme.md')
   eleventyConfig.ignores.add('_pages/_')
 
   // Extensions
