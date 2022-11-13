@@ -1,0 +1,20 @@
+social:
+  - title: E-Mail
+    href: unfueguito@gmail.com
+    icon: envelope
+    hidden: true
+  - title: Youtube
+    icon: youtube
+    href: https://youtube.com/@sinoteinspiranoes
+  - title: Instagram
+    icon: instagram
+    href: https://instagram.com/unfueguito
+  - href: https://twitter.com/unfueguito
+    icon: twitter
+    title: Twitter
+  - title: Facebook
+    icon: facebook
+    href: https://www.facebook.com/unFueguito/
+  - title: TikTok
+    icon: tiktok
+    href: http://www.tiktok.com/@unfueguito

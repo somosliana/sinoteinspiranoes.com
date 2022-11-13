@@ -11,47 +11,56 @@ collections:
         file: _data/html.yaml
         name: html
         fields:
+          - { label: Lang, name: lang, widget: string, required: false }
           - { label: URL, name: url, widget: string, required: false }
           - { label: Titulo, name: title, widget: string, required: false }
           - { label: Descripcion, name: description, widget: string, required: false }
           - { label: Author, name: author, widget: string, required: false }
-          - { label: 'Open Graph', name: image, widget: string, required: false }
+          - { label: 'Open Graph', name: image, widget: image, required: false }
       - label: '🍔 Navegacion'
         file: _data/nav.yaml
         name: nav
         fields:
-          - { label: Youtube, name: youtube, widget: string, required: false }
-          - { label: Facebook, name: facebook, widget: string, required: false }
-          - { label: Instagram, name: instagram, widget: string, required: false }
-          - { label: Tiktok, name: tiktok, widget: string, required: false }
-          - { label: E-Mail, name: email, widget: string, required: false }
+          - label: Navegacion
+            name: nav
+            widget: list
+            allow_add: true
+            fields:
+              - { label: Titulo, name: title, widget: string, required: false }
+              - { label: Link, name: href, widget: string, required: false }
       - label: '🤳 Redes Sociales'
         file: _data/social.yaml
         name: social
         fields:
-          - { label: Youtube, name: youtube, widget: string, required: false }
-          - { label: Facebook, name: facebook, widget: string, required: false }
-          - { label: Instagram, name: instagram, widget: string, required: false }
-          - { label: Tiktok, name: tiktok, widget: string, required: false }
-          - { label: E-Mail, name: email, widget: string, required: false }
+          - label: Redes Sociales
+            name: social
+            widget: list
+            allow_add: true
+            fields:
+              - { label: Titulo, name: title, widget: string, required: false }
+              - { label: Icon, name: icon, widget: string, required: false }
+              - { label: Href, name: href, widget: string, required: false }
+              - { label: Escondido?, name: hidden, widget: boolean, required: false }
       - label: '🀄 Stickers'
         name: stickers
-        file: _data/sticker-list.yaml
+        file: _data/stickers.yaml
         media_folder: '/static/images/stickers'
         fields:
           - label: Stickers
             name: stickers
             widget: list
             allow_add: true
+            summary: '{{fields.image}}'
             fields:
               - { label: Titulo, name: title, widget: string, required: false }
-              - { label: Imagen, name: imagen, widget: image, required: false }
+              - { label: Imagen, name: image, widget: image, required: false }
   - label: Secciones
     name: sections
     editor: { preview: false }
+    media_folder: '/static/images'
     files:
       - label: 'Tienda'
-        file: _data/tienda.yaml
+        file: _data/sections/tienda.yaml
         name: html
         fields:
           - { label: Titulo, name: title, widget: string, required: false }
@@ -59,35 +68,33 @@ collections:
           - { label: Quote, name: q, widget: string, required: false }
           - { label: Link Href, name: href, widget: string, required: false }
           - { label: Link Text, name: text, widget: string, required: false }
-          - { label: Image, name: image, widget: string, required: false }
+          - { label: Image, name: image, widget: image, required: false }
       - label: 'Comentarios'
-        file: _data/comentarios.yaml
+        file: _data/sections/comentarios.yaml
         name: comentarios
         fields:
           - { label: Titulo, name: title, widget: string, required: false }
           - { label: Descripcion, name: p, widget: string, required: false }
-          - { label: Quote, name: q, widget: string, required: false }
           - { label: Link Href, name: href, widget: string, required: false }
           - { label: Link Text, name: text, widget: string, required: false }
-          - { label: Image, name: image, widget: string, required: false }
+          - { label: Image, name: image, widget: image, required: false }
       - label: 'Stickers'
-        file: _data/stickers.yaml
+        file: _data/sections/stickers.yaml
         name: stickers
         fields:
           - { label: Titulo, name: title, widget: string, required: false }
           - { label: Descripcion, name: p, widget: string, required: false }
-          - { label: Quote, name: q, widget: string, required: false }
           - { label: Link Href, name: href, widget: string, required: false }
           - { label: Link Text, name: text, widget: string, required: false }
-          - { label: Image, name: image, widget: string, required: false }
+          - { label: Image, name: image, widget: image, required: false }
       - label: 'Contacto'
-        file: _data/contacto.yaml
+        file: _data/sections/contacto.yaml
         name: contacto
         fields:
           - { label: Titulo, name: title, widget: string, required: false }
           - { label: Descripcion, name: p, widget: string, required: false }
       - label: 'Suscribite'
-        file: _data/suscribite.yaml
+        file: _data/sections/suscribite.yaml
         name: suscribite
         fields:
           - { label: Titulo, name: title, widget: string, required: false }

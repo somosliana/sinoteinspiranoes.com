@@ -1,0 +1,11 @@
+nav:
+  - title: Inicio
+    href: /
+  - title: Tienda
+    href: https://tintalibre.com.ar/book/1363/Si_no_te_inspira,_no_es
+  - title: Stickers
+    href: /stickers
+  - title: Comentarios
+    href: /comentarios
+  - title: Contacto
+    href: /contacto

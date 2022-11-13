@@ -39,27 +39,29 @@
               </defs>
             </svg>
           </div>
-          <h3 class="font-bold text-2xl sm:text-3xl text-white">Eventos y contrataciones</h3>
-          <p class="mt-6 text-base text-[#F4F5F7] max-w-3xl">Escribime la propuesta por acá y nos ponemos en contacto con vos.</p>
+          <h3 class="font-bold text-2xl sm:text-3xl text-white">{{ sections.contacto.title }}</h3>
+          <p class="mt-6 text-base text-[#F4F5F7] max-w-3xl">{{ sections.contacto.p }}</p>
           <dl class="mt-8 space-y-6">
             <dt><span class="sr-only">Email</span></dt>
             <dd class="flex text-base text-[#F4F5F7]">
               <svg class="w-6 h-6">
                 <use xlink:href="/static/sprites/regular.svg#envelope"></use>
               </svg>
-              <span class="ml-3">{{ settings._.email }}</span>
+              <span class="ml-3">{{ social.social[0].href }}</span>
             </dd>
           </dl>
           <ul role="list" class="mt-8 flex gap-4">
-            {% for x in settings.social %}
-            <li>
-              <a class="text-[#F4F5F7] hover:text-[#eaebed]" href="{{ x.url }}">
-                <span class="sr-only">{{ x.title }}</span>
-                <svg class="w-6 h-6">
-                  <use xlink:href="/static/sprites/brands.svg#{{ x.icon }}"></use>
-                </svg>
-              </a>
-            </li>
+            {% for x in social.social %}
+              {% unless x.hidden %}
+                <li>
+                  <a class="text-[#F4F5F7] hover:text-[#eaebed]" href="{{ x.href }}">
+                    <span class="sr-only">{{ x.title }}</span>
+                    <svg class="w-6 h-6">
+                      <use xlink:href="/static/sprites/brands.svg#{{ x.icon }}"></use>
+                    </svg>
+                  </a>
+                </li>
+              {% endunless %}
             {% endfor %}
           </ul>
         </div>

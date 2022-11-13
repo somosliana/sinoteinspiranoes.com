@@ -10,8 +10,8 @@
           </a>
         </div>
         <div class="hidden sm:ml-6 sm:flex gap-4 lg:gap-6">
-          {% for x in settings.nav %}
-          <a href="{{ x.url }} "
+          {% for x in nav.nav %}
+          <a href="{{ x.href }} "
             class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
             {{ x.title }}
           </a>
@@ -20,13 +20,15 @@
       </div>
       <!-- Social -->
       <div class="hidden sm:flex sm:items-center gap-4">
-        {% for x in settings.social %}
-          <a href="{{ x.url }}" class="text-gray-400 hover:text-gray-500">
+        {% for x in social.social %}
+          {% unless x.hidden %}
+          <a href="{{ x.href }}" class="text-gray-400 hover:text-gray-500">
             <span class="sr-only">{{ x.title }}</span>
             <svg class="w-6 h-6">
               <use xlink:href="/static/sprites/brands.svg#{{ x.icon }}"></use>
             </svg>
           </a>
+          {% endunless %}
         {% endfor %}
       </div>
       <!-- Burger -->
@@ -55,20 +57,22 @@
   <div x-description="Mobile menu, show/hide based on menu state." class="sm:hidden" id="mobile-menu" x-show="open">
     <!-- Nav -->
     <div class="pt-2 pb-3 space-y-1">
-      {% for x in settings.nav %}
-      <a href="{{x.url}}"
+      {% for x in nav.nav %}
+      <a href="{{ x.href }}"
       class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">{{x.title}}</a>
       {% endfor %}
     </div>
     <!-- Social -->
     <div class="my-4 flex justify-center gap-x-6">
-      {% for x in settings.social %}
-      <a href="{{x.url }}" class="text-gray-400 hover:text-gray-500">
-        <span class="sr-only">{{ x.title }}</span>
-        <svg class="w-6 h-6" style="color: gray;">
-          <use xlink:href="/static/sprites/brands.svg#{{x.icon}}"></use>
-        </svg>
-      </a>
+      {% for x in social.social %}
+        {% unless x.hidden %}
+          <a href="{{ x.href }}" class="text-gray-400 hover:text-gray-500">
+            <span class="sr-only">{{ x.title }}</span>
+            <svg class="w-6 h-6 text-gray-500">
+              <use xlink:href="/static/sprites/brands.svg#{{x.icon }}"></use>
+            </svg>
+          </a>
+        {% endunless %}
       {% endfor %}
     </div>
   </div>

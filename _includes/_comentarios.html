@@ -8,10 +8,8 @@
       </div>
       <div class="bg-white py-16 px-4 sm:px-6 lg:col-span-3 lg:py-24 lg:px-8 xl:pl-12">
         <div class="max-w-lg mx-auto lg:max-w-none">
-          <h2 class="text-2xl font-extrabold tracking-tight">Dejame acá tus comentarios sobre
-            el libro.</h2>
-          <p class="mt-3 text-lg leading-6 text-gray-500">Quiero saber que cosas nos pusieron en sintonía a vos y a mí.
-          </p>
+          <h2 class="text-2xl font-extrabold tracking-tight">{{ sections.comentarios.title }}</h2>
+          <p class="mt-3 text-lg leading-6 text-gray-500">{{ sections.comentarios.p }}</p>
           <form class="grid grid-cols-1 gap-y-6 mt-3" name="comentarios" action="#" method="POST" data-netlify="true">
             <div><label for="full-name" class="sr-only">Nombre</label> <input type="text" name="full-name"
                 id="full-name" autocomplete="name"

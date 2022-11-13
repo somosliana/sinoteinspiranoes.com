@@ -1,9 +1,0 @@
-{
-  "files.exclude": {
-    "**/pnpm-lock.yaml": true,
-    "**/public": false,
-    // sm
-    "**/_drafts": true,
-  },
-  "peacock.remoteColor": "#f1a9c2"
-}

@@ -2,8 +2,8 @@
 layout: index.html
 ---
 <div class="flex flex-col flex-1">
-  {% include '_card.html' title:'¡Si no te inspira no es!' image:'/static/images/tienda.png' odd:true p:'Mi primer libro ya está disponible ¡Pedí el tuyo acá!.' q:'La inspiración es un fueguito que va prendiendo otros fueguitos, porque funciona cuando alguien hace algo, que interpela a un otro y lo hace hacer algo también' href:settings._.tienda btn:'Ir a la tienda' %}
-  {% include '_card.html' title:'Dejame acá tus comentarios sobre el libro.' image:'/static/images/comentarios.png' odd:false p:'Quiero saber que cosas nos pusieron en sintonía a vos y a mí.' href:'/comentarios' btn:'Enviar un comentario' %}
-  {% include '_card.html' title:'¡Descarga tus stickers!' image:'/static/images/stickers.png' odd:true p:'¡Y sigamos dejando fueguitos por ahí!🔥❤ ' href:'/stickers' btn:'Ver Stickers' %}
+  {% include '_card.html' odd:true title:sections.tienda.title image:sections.tienda.image p:sections.tienda.p q:sections.tienda.q href:sections.tienda.href text:sections.tienda.text %}
+  {% include '_card.html' odd:false title:sections.comentarios.title image:sections.comentarios.image p:sections.comentarios.p q:sections.comentarios.q href:sections.comentarios.href text:sections.comentarios.text %}
+  {% include '_card.html' odd:true title:sections.stickers.title image:sections.stickers.image p:sections.stickers.p q:sections.stickers.q href:sections.stickers.href text:sections.stickers.text %}
   {% include '_contacto.html' %}
 </div>
