@@ -1,9 +1,9 @@
 <div class="flex flex-col gap-4 py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
   <h2>Stickers</h2>
   <div class="grid grid-cols-5">
-    {% for x in settings.stickers %}
-    <a href="/static/images/stickers/{{ x }}.jpg">
-      <img src="/static/images/stickers/{{ x }}.webp">
+    {% for x in stickers.stickers %}
+    <a href="{{ x.image }}">
+      <img src="{%if x.webp %}{{ x.webp }}{% else %}{{ x.image }}{% endif %}">
     </a>
     {% endfor %}
   </div>

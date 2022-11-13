@@ -1,13 +1,25 @@
 stickers:
 - image: /static/images/stickers/benditos.jpg
+  webp: /static/images/stickers/benditos.webp
 - image: /static/images/stickers/calma.jpg
+  webp: /static/images/stickers/calma.webp
 - image: /static/images/stickers/CH.jpg
+  webp: /static/images/stickers/CH.webp
 - image: /static/images/stickers/DIVER.jpg
+  webp: /static/images/stickers/DIVER.webp
 - image: /static/images/stickers/inspira.jpg
+  webp: /static/images/stickers/inspira.webp
 - image: /static/images/stickers/mate.jpg
+  webp: /static/images/stickers/mate.webp
 - image: /static/images/stickers/me voy.jpg
+  webp: /static/images/stickers/me voy.webp
 - image: /static/images/stickers/mesurass.jpg
+  webp: /static/images/stickers/mesurass.webp
 - image: /static/images/stickers/muy bien.jpg
+  webp: /static/images/stickers/muy bien.webp
 - image: /static/images/stickers/no queres.jpg
+  webp: /static/images/stickers/no queres.webp
 - image: /static/images/stickers/noter.jpg
+  webp: /static/images/stickers/noter.webp
 - image: /static/images/stickers/olvidame.jpg
+  webp: /static/images/stickers/olvidame.webp
