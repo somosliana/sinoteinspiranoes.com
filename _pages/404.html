@@ -1,7 +1,19 @@
 ---
 permalink: 404.html
 ---
-<div class="flex flex-col mx-auto items-center justify-center h-full">
-  <h2>404</h2>
-  <p>Esa pagina no existe</p>
+<main class="flex flex-col flex-1">
+<div class="grid grid-rows-2 p-8 sm:grid-rows-none sm:grid-cols-2">
+  <!-- Image -->
+  <div class="flex items-center justify-center p-4 {% if odd %}sm:order-last{% endif %}">
+    <img class="h-full" alt="Logo" src="/static/vectors/logo.svg" loading="lazy" />
+  </div>
+  <!-- Description -->
+  <div class="flex flex-col items-start justify-around gap-12 p-4 border-t-2 sm:border-t-0 {% if odd %}sm:border-r-2 sm:border-l-0{% else %} sm:border-l-2{% endif %} sm:p-12">
+    <div class="flex flex-col items-start justify-center gap-4">
+      <h2 class="font-bold text-2xl sm:text-3xl">404</h2>
+      <p>Esta pagina no existe!.</p>
+    </div>
+    <a href="/" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">Ir a inicio</a>
+  </div>
 </div>
+</main>
