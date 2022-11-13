@@ -19,6 +19,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     './node_modules/alpinejs/dist/cdn.min.js': 'alpine.js',
     './static': 'static',
+    './netlifycms.yaml': 'admin/config.yml'
   })
 
   // Conditional eleventyConfigs
