@@ -4,206 +4,91 @@ locale: 'es'
 media_folder: 'static/images/uploads'
 collections:
   - label: Configuracion
-    name: files
+    name: settings
     editor: { preview: false }
     files:
-      - label: '🎠 Carousel'
-        name: carousel
-        file: data/carousel.json
-        media_folder: '/static/images/carousel'
+      - label: '👨‍💻 HTML'
+        file: _data/html.yaml
+        name: html
         fields:
-          - label: Slides
-            name: slides
-            label_singular: slide
+          - { label: URL, name: url, widget: string, required: false }
+          - { label: Titulo, name: title, widget: string, required: false }
+          - { label: Descripcion, name: description, widget: string, required: false }
+          - { label: Author, name: author, widget: string, required: false }
+          - { label: 'Open Graph', name: image, widget: string, required: false }
+      - label: '🍔 Navegacion'
+        file: _data/nav.yaml
+        name: nav
+        fields:
+          - { label: Youtube, name: youtube, widget: string, required: false }
+          - { label: Facebook, name: facebook, widget: string, required: false }
+          - { label: Instagram, name: instagram, widget: string, required: false }
+          - { label: Tiktok, name: tiktok, widget: string, required: false }
+          - { label: E-Mail, name: email, widget: string, required: false }
+      - label: '🤳 Redes Sociales'
+        file: _data/social.yaml
+        name: social
+        fields:
+          - { label: Youtube, name: youtube, widget: string, required: false }
+          - { label: Facebook, name: facebook, widget: string, required: false }
+          - { label: Instagram, name: instagram, widget: string, required: false }
+          - { label: Tiktok, name: tiktok, widget: string, required: false }
+          - { label: E-Mail, name: email, widget: string, required: false }
+      - label: '🀄 Stickers'
+        name: stickers
+        file: _data/sticker-list.yaml
+        media_folder: '/static/images/stickers'
+        fields:
+          - label: Stickers
+            name: stickers
             widget: list
             allow_add: true
             fields:
-              - label: Logo
-                name: logo
-                widget: list
-                allow_add: true
-                summary: '{{fields.titulo}}'
-                fields:
-                  - { label: Titulo, name: titulo, widget: string }
-                  - { label: URL, name: url, widget: string, required: false }
-                  - {
-                      label: 'Imagen [320x287] (playlist-<genero>.jpg)',
-                      name: imagen,
-                      widget: image,
-                    }
-      - label: '🔖 Playlists'
-        name: playlists
-        file: data/playlists.json
-        media_folder: '/static/images/playlists'
-        fields:
-          - label: Playlists
-            name: playlists
-            widget: list
-            allow_add: true
-            fields:
-              - { label: Titulo, name: titulo, widget: string }
-              - { label: URL, name: url, widget: string }
-              - { label: 'Imagen [320x287] (playlist-<genero>.jpg)', name: imagen, widget: image }
-      - label: '📻 Programación'
-        name: programacion
-        file: data/programacion.json
-        media_folder: '/static/images/programacion'
-        fields:
-          - { label: Esconder?, name: invisible, widget: boolean, required: false }
-          - label: Programación
-            name: programacion
-            widget: list
-            allow_add: true
-            fields:
-              - { label: Titulo, name: titulo, widget: string }
-              - { label: Esconder?, name: invisible, widget: boolean, required: false }
-              - label: Episodios
-                name: episodios
-                widget: list
-                fields:
-                  - { label: Titulo, name: title, widget: string }
-                  - { label: URL, name: url, widget: string }
-                  - {
-                      label: Fecha,
-                      name: fecha,
-                      widget: datetime,
-                      format: 'DD-MM-YYYY',
-                      date_format: 'DD-MM-YYYY',
-                      time_format: false,
-                    }
-              - { label: Imagen, name: imagen, widget: image }
-              - { label: Dia, name: dia, widget: string }
-              - { label: Horario, name: hora, widget: string }
-              - { label: Tags, name: tags, widget: list }
-              - { label: Descripcion, name: descripcion, widget: 'markdown' }
-              - { label: Musicalizacion, name: musicalizacion, widget: string }
-              - { label: Contacto, name: contacto, widget: string }
-      - label: '🎥 Audiovisual'
-        name: audiovisual
-        file: data/audiovisual.json
-        fields:
-          - label: Audiovisual
-            name: audiovisual
-            widget: list
-            allow_add: true
-            fields:
-              - { label: Titulo, name: titulo, widget: string }
-              - { label: Logo, name: logo, widget: image, media_folder: '/static/images/logos' }
-              - {
-                  label: 'Es un background claro?',
-                  name: isBgLight,
-                  widget: boolean,
-                  required: true,
-                }
-              - {
-                  label: Background,
-                  name: background,
-                  widget: image,
-                  media_folder: '/static/images/backgrounds',
-                }
-              - { label: Descripcion, name: descripcion, widget: 'markdown' }
-              - {
-                  label: Imagen,
-                  name: imagen,
-                  widget: image,
-                  media_folder: '/static/images/flyers',
-                }
-              - {
-                  label: Plataforma,
-                  name: plataforma,
-                  widget: select,
-                  options: ['instagram', 'youtube'],
-                }
-              - { label: 'Texto del Link', name: url-texto, widget: string }
-              - { label: URL, name: url, widget: string }
-      - label: '📚 Editorial'
-        name: editorial
-        file: data/editorial.json
-        media_folder: '/static/images/editorial'
-        fields:
-          - label: Editorial
-            name: editorial
-            widget: list
-            allow_add: true
-            fields:
-              - { label: Titulo, name: titulo, widget: string }
-              - { label: Subtitulo, name: subtitulo, widget: markdown }
-              - { label: Imagen, name: imagen, widget: image }
-              - { label: Precio, name: precio, widget: number }
-              - { label: Agotado?, name: agotado, widget: boolean, required: false }
-              - { label: URL, name: url, widget: string }
-              - { label: Descripcion, name: descripcion, widget: markdown }
-      - label: '🤝 Encuentros'
-        name: encuentros
-        file: data/encuentros.json
-        fields:
-          - label: Encuentros
-            name: encuentros
-            widget: list
-            allow_add: true
-            fields:
-              - { label: Titulo, name: titulo, widget: string }
-              - { label: Logo, name: logo, widget: image, media_folder: '/static/images/logos' }
-              - {
-                  label: 'Es un background claro?',
-                  name: isBgLight,
-                  widget: boolean,
-                  required: true,
-                }
-              - {
-                  label: Background,
-                  name: background,
-                  widget: image,
-                  media_folder: '/static/images/backgrounds',
-                }
-              - { label: Descripcion, name: descripcion, widget: 'markdown' }
-              - {
-                  label: Imagen,
-                  name: imagen,
-                  widget: image,
-                  media_folder: '/static/images/flyers',
-                }
-              - {
-                  label: Plataforma,
-                  name: plataforma,
-                  widget: select,
-                  options: ['instagram', 'youtube'],
-                }
-              - { label: 'Texto del Link', name: url-texto, widget: string }
-              - { label: URL, name: url, widget: string }
-      - label: '⚙️ Settings'
-        name: settings
-        file: data/settings.yaml
-        fields:
-          - { label: URL, name: url, widget: string }
-          - { label: Titulo, name: title, widget: string }
-          - { label: Descripcion, name: description, widget: string }
-          - { label: Author, name: author, widget: string }
-          - { label: 'Open Graph', name: image, widget: string }
-          - { label: 'App Store', name: app-store, widget: string }
-          - { label: 'Google Play', name: google-play, widget: string }
-          - { label: Youtube, name: youtube, widget: string }
-          - { label: Facebook, name: facebook, widget: string }
-          - { label: Instagram, name: instagram, widget: string }
-          - { label: Spotify, name: spotify, widget: string }
-          - { label: E-Mail, name: email, widget: string }
-  - label: Novedades
-    name: noticias
-    folder: pages/p
-    create: true
+              - { label: Titulo, name: title, widget: string, required: false }
+              - { label: Imagen, name: imagen, widget: image, required: false }
+  - label: Secciones
+    name: sections
     editor: { preview: false }
-    summary: '{{day}}/{{month}}/{{year}} {{hour}}:{{minute}} - {{fields.title}}'
-    # identifier_field: date
-    slug: '{{year}}{{month}}{{day}}{{hour}}{{minute}}{{second}}'
-    # slug: '{{year}}{{month}}{{day}}-{{slug}}'
-    fields:
-      - { label: Titulo, name: title, widget: string }
-      - { label: Fecha, name: date, widget: datetime }
-      - widget: select
-        label: 'tags'
-        name: 'tags'
-        multiple: true
-        create: true
-        options: ['noticias', 'fanzines', 'eventos', 'encuentros', 'talleres']
-      - { label: 'Texto', name: 'body', widget: 'markdown' }
-      - { label: 'Imagen', name: image, widget: image }
+    files:
+      - label: 'Tienda'
+        file: _data/tienda.yaml
+        name: html
+        fields:
+          - { label: Titulo, name: title, widget: string, required: false }
+          - { label: Descripcion, name: p, widget: string, required: false }
+          - { label: Quote, name: q, widget: string, required: false }
+          - { label: Link Href, name: href, widget: string, required: false }
+          - { label: Link Text, name: text, widget: string, required: false }
+          - { label: Image, name: image, widget: string, required: false }
+      - label: 'Comentarios'
+        file: _data/comentarios.yaml
+        name: comentarios
+        fields:
+          - { label: Titulo, name: title, widget: string, required: false }
+          - { label: Descripcion, name: p, widget: string, required: false }
+          - { label: Quote, name: q, widget: string, required: false }
+          - { label: Link Href, name: href, widget: string, required: false }
+          - { label: Link Text, name: text, widget: string, required: false }
+          - { label: Image, name: image, widget: string, required: false }
+      - label: 'Stickers'
+        file: _data/stickers.yaml
+        name: stickers
+        fields:
+          - { label: Titulo, name: title, widget: string, required: false }
+          - { label: Descripcion, name: p, widget: string, required: false }
+          - { label: Quote, name: q, widget: string, required: false }
+          - { label: Link Href, name: href, widget: string, required: false }
+          - { label: Link Text, name: text, widget: string, required: false }
+          - { label: Image, name: image, widget: string, required: false }
+      - label: 'Contacto'
+        file: _data/contacto.yaml
+        name: contacto
+        fields:
+          - { label: Titulo, name: title, widget: string, required: false }
+          - { label: Descripcion, name: p, widget: string, required: false }
+      - label: 'Suscribite'
+        file: _data/suscribite.yaml
+        name: suscribite
+        fields:
+          - { label: Titulo, name: title, widget: string, required: false }
+          - { label: Descripcion, name: p, widget: string, required: false }
