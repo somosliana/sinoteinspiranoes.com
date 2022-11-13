@@ -7,19 +7,19 @@ seo:
   title: Si no te inspira no es
   description: Próximamente
   og: https://sinoteinspiranoes.com/static/images/og.png
-  author: '@unfueguito'
+  author: "@unfueguito"
 nav:
   - title: Inicio
-    url: '/'
+    url: /
   - title: Tienda
-    url: 'https://tintalibre.com.ar/book/1363/Si_no_te_inspira,_no_es'
+    url: https://tintalibre.com.ar/book/1363/Si_no_te_inspira,_no_es
     external: true
   - title: Stickers
-    url: '/stickers'
+    url: /stickers
   - title: Comentarios
-    url: '/comentarios'
+    url: /comentarios
   - title: Contacto
-    url: '/contacto'
+    url: /contacto
 social:
   - title: Youtube
     icon: youtube
@@ -36,8 +36,6 @@ social:
   - title: Tiktok
     icon: tiktok
     url: http://www.tiktok.com/@unfueguito
-
-# helpers
 stickers:
   - benditos
   - calma
@@ -51,3 +49,4 @@ stickers:
   - no queres
   - noter
   - olvidame
+seo.url: https://sinoteinspiranoes.com/
