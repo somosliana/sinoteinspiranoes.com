@@ -7,6 +7,21 @@ collections:
     name: settings
     editor: { preview: false }
     files:
+      - label: '🀄 Stickers'
+        name: stickers
+        file: _data/stickers.yaml
+        media_folder: '/static/images/stickers'
+        fields:
+          - label: Stickers
+            name: stickers
+            widget: list
+            allow_add: true
+            add_to_top: true
+            summary: '{{fields.grande}}'
+            fields:
+              # - { label: Titulo, name: title, widget: string, required: false }
+              - { label: Imagen Chica, name: chica, widget: image, required: false }
+              - { label: Imagen Grande, name: grande, widget: image, required: false }
       - label: '👨‍💻 HTML'
         file: _data/html.yaml
         name: html
@@ -41,19 +56,6 @@ collections:
               - { label: Icon, name: icon, widget: string, required: false }
               - { label: Href, name: href, widget: string, required: false }
               - { label: Escondido?, name: hidden, widget: boolean, required: false }
-      - label: '🀄 Stickers'
-        name: stickers
-        file: _data/stickers.yaml
-        media_folder: '/static/images/stickers'
-        fields:
-          - label: Stickers
-            name: stickers
-            widget: list
-            allow_add: true
-            summary: '{{fields.image}}'
-            fields:
-              - { label: Titulo, name: title, widget: string, required: false }
-              - { label: Imagen, name: image, widget: image, required: false }
   - label: Secciones
     name: sections
     editor: { preview: false }

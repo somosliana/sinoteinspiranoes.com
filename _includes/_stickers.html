@@ -2,8 +2,8 @@
   <h2>Stickers</h2>
   <div class="grid grid-cols-5">
     {% for x in stickers.stickers %}
-    <a href="{{ x.image }}">
-      <img src="{%if x.webp %}{{ x.webp }}{% else %}{{ x.image }}{% endif %}">
+    <a href="{{ x.grande }}">
+      <img src="{%if x.chica %}{{ x.chica }}{% else %}{{ x.grande }}{% endif %}">
     </a>
     {% endfor %}
   </div>
